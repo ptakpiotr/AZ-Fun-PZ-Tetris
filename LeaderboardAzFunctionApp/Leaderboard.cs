@@ -42,7 +42,7 @@ public static class Leaderboard
         {
             logger.LogError(ex, ex.Message);
 
-            return new ObjectResult(new ResultModel(ex.Message))
+            return new ObjectResult(new ResultModel("Error occured while trying to add the new score"))
             {
                 StatusCode = StatusCodes.Status500InternalServerError
             };
